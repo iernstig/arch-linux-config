@@ -93,15 +93,16 @@ scroll-down = i3wm-wsprev
 
 modules-left = arch workspaces
 modules-center = spotify
-;term files browser settings network powermenu
+;term files browser settings network powermenu gcal-helper
 modules-right = updates-arch-combined volume battery backlight date
  
 ;== Modules ========================================================
 
 [module/arch]
 type = custom/text
-content = 
+content = 
 ;alt-icon = 
+;
 content-padding = 2
 content-background = ${color.acolor}
 content-foreground = ${color.fg}
@@ -205,6 +206,12 @@ interval = 600
 ; ;exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 ; ;label = %{A1:termite -e "aurman -Syyu" & disown:} %{A3:termite -e "aurman -Syyu" & disown:}%output%%{A} %{A}
 ; tail = true
+
+[module/gcal-helper]
+type = custom/script
+interval = 30
+exec = ~/.config/polybar/modules/helper/helper
+
 
 [module/battery]
 type = internal/battery
