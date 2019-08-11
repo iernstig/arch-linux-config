@@ -98,7 +98,7 @@ scroll-down = i3wm-wsprev
 modules-left = arch workspaces
 modules-center = spotify
 ;term files browser settings network pkg powermenu
-modules-right = volume battery backlight date
+modules-right = updates-arch-combined volume battery backlight date
  
 ;== Modules ========================================================
 
@@ -199,13 +199,16 @@ format-prefix = "♫ "
 format = <label>
 exec = python ~/.config/polybar/modules/spotify/spotify_status.py
 ;==========================================================
-
-[module/pkg]
+[module/updates-arch-combined]
 type = custom/script
-exec = updates.sh
-;exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
-;label = %{A1:termite -e "aurman -Syyu" & disown:} %{A3:termite -e "aurman -Syyu" & disown:}%output%%{A} %{A}
-tail = true
+exec = bash ~/.config/polybar/modules/updates-arch-combined/updates-arch-combined.sh
+interval = 600
+; [module/pkg]
+; type = custom/script
+; exec = updates.sh
+; ;exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+; ;label = %{A1:termite -e "aurman -Syyu" & disown:} %{A3:termite -e "aurman -Syyu" & disown:}%output%%{A} %{A}
+; tail = true
 
 [module/battery]
 type = internal/battery
