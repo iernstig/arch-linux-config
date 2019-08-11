@@ -13,8 +13,4 @@ fi
 
 updates=$(("$updates_arch" + "$updates_aur"))
 
-if [ "$updates" -gt 0 ]; then
-    echo "⬇ arch: $updates_arch aur: $updates_aur"
-else
-    echo ""
-fi
+echo "⬇ arch: $updates_arch aur: $updates_aur"
