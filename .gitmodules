@@ -1,0 +1,3 @@
+[submodule "polybar/modules/helper"]
+	path = polybar/modules/helper
+	url = https://github.com/LSaldyt/helper.git
