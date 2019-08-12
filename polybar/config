@@ -13,13 +13,15 @@
 ;
 ;==========================================================
 
+; * TODO fix networking icon
+; https://arcolinux.com/all-modules-that-are-available-for-polybar-any-desktop/
 [color]
 
 trans = #00000000
 white = #FFFFFF
 black = #000000
 
-bg = #1F1F1F
+bg = #222222
 fg = #FFFFFF
 fg-alt = #A9ABB0
 
